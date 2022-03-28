@@ -10,8 +10,10 @@ Im Detail soll das Frontend folgende Anforderungen erfüllen:
     * Es sollen Metdaten der Protokolle in Tabellen (auch ein  Grid ist denkbar)-Format dargestellt werden
     * Die Tabelle soll über Metadaten filter- und sortierbar sein
     * Das Laden sehr vieler Daten soll durch eine Pagination / Infinite scrolling gestützt werden
-  - Da die Protokolle selbst im PDF Format vorliegen sollen diese beim Öffnen in einer Webansicht dargestellt werden können. Dies geschieht beim Klick auf den Namen des Datensatzes
-  - In der letzten Spalte der Tabelle befindet sich ein Marker (gerne Icon oder Text) der es dem Benutzer die Möglichkeit bietet ein Datensatz zu löschen
+  - In der letzten Spalte der Tabelle befinden sich zwei Marker (Icon oder Text) mit denen der Benutzer die folgenden zwei Aktionen ausführen kann:
+    - Löschen eines Datensatzes
+    - da zu jedem vorhandenem Datensatz jeweils ein PDF-Dokument gehört, soll der Benutzer hier die Möglichkeit zum Öffnen des PDFs in einer Webansicht haben
+  - Der Benutzer soll die Möglichkeit haben einen Datensatz im Detail zu betrachten. Dazu soll beim Klick auf den Namen eines Datensatz eine neue Seite erscheinen die detailierte Informationen zum Datensatz darstellt __(Felder können frei gewählt werden)__
   
   Optional:
   - Der Benutzer hat die Möglichkeit nach einem Datensatz zu suchen (vereinfacht bspw. über den Namen). Dazu befindet sich ein Suchfeld über der Tabelle
