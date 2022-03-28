@@ -19,5 +19,5 @@ Im Detail soll das Frontend folgende Anforderungen erfüllen:
 ## Hilfsmittel
 
 - Alle "Bordmittel" des Angular-Frameworks
-- Lizenzrechtlich nicht in Konflikt stehende Komponenten / Style Frameworks
+- Lizenzrechtlich nicht in Konflikt stehende Komponenten- und/oder Style Frameworks
 -    
