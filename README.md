@@ -13,7 +13,7 @@ Im Detail soll das Frontend folgende Anforderungen erfüllen:
   - In der letzten Spalte der Tabelle befinden sich zwei Marker (Icon oder Text) mit denen der Benutzer die folgenden zwei Aktionen ausführen kann:
     - Löschen eines Datensatzes
     - da zu jedem vorhandenem Datensatz jeweils ein PDF-Dokument gehört, soll der Benutzer hier die Möglichkeit zum Öffnen des PDFs in einer Webansicht haben
-  - Der Benutzer soll die Möglichkeit haben einen Datensatz im Detail zu betrachten. Dazu soll beim Klick auf den Namen eines Datensatz eine neue Seite erscheinen die detailierte Informationen zum Datensatz darstellt __(Felder können frei gewählt werden)__
+  - Der Benutzer soll die Möglichkeit haben einen Datensatz im Detail zu betrachten. Dazu soll beim Klick auf den Namen eines Datensatz eine neue Seite erscheinen die detailierte Informationen zum Datensatz darstellt _(Felder können frei gewählt werden)_
   
   Optional:
   - Der Benutzer hat die Möglichkeit nach einem Datensatz zu suchen (vereinfacht bspw. über den Namen). Dazu befindet sich ein Suchfeld über der Tabelle
