@@ -15,25 +15,16 @@ namespace SimpleApp.Migrations
                 {
                     ProtocolId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>(type: "TEXT", nullable: true),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    FileName = table.Column<string>(type: "TEXT", nullable: false),
                     DrawingNumber = table.Column<string>(type: "TEXT", nullable: true),
                     PartNumber = table.Column<string>(type: "TEXT", nullable: true),
                     OrderNumber = table.Column<string>(type: "TEXT", nullable: true),
                     WorkpieceName = table.Column<string>(type: "TEXT", nullable: true),
-                    CustomerName = table.Column<string>(type: "TEXT", nullable: true),
-                    CncName = table.Column<string>(type: "TEXT", nullable: true),
                     SoftwareVersion = table.Column<string>(type: "TEXT", nullable: true),
                     OperatorName = table.Column<string>(type: "TEXT", nullable: true),
                     CmmNumber = table.Column<string>(type: "TEXT", nullable: true),
-                    MeasuredOn = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    DrawingIndex = table.Column<string>(type: "TEXT", nullable: true),
-                    UserDefined1 = table.Column<string>(type: "TEXT", nullable: true),
-                    UserDefined2 = table.Column<string>(type: "TEXT", nullable: true),
-                    UserDefined3 = table.Column<string>(type: "TEXT", nullable: true),
-                    UserDefined4 = table.Column<string>(type: "TEXT", nullable: true),
-                    UserDefined5 = table.Column<string>(type: "TEXT", nullable: true),
-                    UserDefined6 = table.Column<string>(type: "TEXT", nullable: true),
-                    UserDefined7 = table.Column<string>(type: "TEXT", nullable: true)
+                    MeasuredOn = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -64,8 +55,28 @@ namespace SimpleApp.Migrations
 
             migrationBuilder.InsertData(
                 table: "Protocols",
-                columns: new[] { "ProtocolId", "CmmNumber", "CncName", "CustomerName", "DrawingIndex", "DrawingNumber", "MeasuredOn", "Name", "OperatorName", "OrderNumber", "PartNumber", "SoftwareVersion", "UserDefined1", "UserDefined2", "UserDefined3", "UserDefined4", "UserDefined5", "UserDefined6", "UserDefined7", "WorkpieceName" },
-                values: new object[] { 1, null, null, null, null, "Test", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "First Protocol", null, null, null, null, null, null, null, null, null, null, null, null });
+                columns: new[] { "ProtocolId", "CmmNumber", "DrawingNumber", "FileName", "MeasuredOn", "Name", "OperatorName", "OrderNumber", "PartNumber", "SoftwareVersion", "WorkpieceName" },
+                values: new object[] { 1, "112233", "11", "28022022114012_IV05N002R0.pdf", new DateTime(2022, 3, 30, 13, 49, 1, 569, DateTimeKind.Local).AddTicks(497), "mein_block_testv1", "", "", "11", "", "" });
+
+            migrationBuilder.InsertData(
+                table: "Protocols",
+                columns: new[] { "ProtocolId", "CmmNumber", "DrawingNumber", "FileName", "MeasuredOn", "Name", "OperatorName", "OrderNumber", "PartNumber", "SoftwareVersion", "WorkpieceName" },
+                values: new object[] { 2, "112233", "8", "24022022112318_IV05N002R0.pdf", new DateTime(2022, 3, 30, 13, 49, 1, 569, DateTimeKind.Local).AddTicks(540), "mein_block_testv2", "", "", "8", "", "" });
+
+            migrationBuilder.InsertData(
+                table: "Protocols",
+                columns: new[] { "ProtocolId", "CmmNumber", "DrawingNumber", "FileName", "MeasuredOn", "Name", "OperatorName", "OrderNumber", "PartNumber", "SoftwareVersion", "WorkpieceName" },
+                values: new object[] { 3, "112233", "9", "24022022112244_IV05N002R0.pdf", new DateTime(2022, 3, 30, 13, 49, 1, 569, DateTimeKind.Local).AddTicks(542), "mein_block_testv3", "", "", "9", "", "" });
+
+            migrationBuilder.InsertData(
+                table: "Protocols",
+                columns: new[] { "ProtocolId", "CmmNumber", "DrawingNumber", "FileName", "MeasuredOn", "Name", "OperatorName", "OrderNumber", "PartNumber", "SoftwareVersion", "WorkpieceName" },
+                values: new object[] { 4, "112233", "11", "24022022112301_IV05N002R0.pdf", new DateTime(2022, 3, 30, 13, 49, 1, 569, DateTimeKind.Local).AddTicks(545), "mein_block_testv4", "", "", "11", "", "" });
+
+            migrationBuilder.InsertData(
+                table: "Protocols",
+                columns: new[] { "ProtocolId", "CmmNumber", "DrawingNumber", "FileName", "MeasuredOn", "Name", "OperatorName", "OrderNumber", "PartNumber", "SoftwareVersion", "WorkpieceName" },
+                values: new object[] { 5, "112233", "11", "20122021070353_IV05N002R0.pdf", new DateTime(2022, 3, 30, 13, 49, 1, 569, DateTimeKind.Local).AddTicks(547), "mein_block_testv5", "", "", "11", "", "" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Comments_ProtocolId",
