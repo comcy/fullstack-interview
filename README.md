@@ -28,4 +28,7 @@ Das Backend soll um folgende Funktionen erweitert werden:
 
 - Alle "Bordmittel" des Angular-Frameworks
 - Lizenzrechtlich nicht in Konflikt stehende Komponenten- und/oder Style Frameworks
--    
+
+## Zum anlegen der SQLite DB
+- dotnet tool install --global dotnet-ef
+- dotnet ef database update (im SimpleAPI Ordner)
