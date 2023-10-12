@@ -1,34 +1,42 @@
 # fullstack-interview
 A sample project to use for challenging some volunteers during job interviews.
 
-## Aufgabe
+## Challenge
 
-Die Aufgabe des Entwicklers ist das Erstellen eines Frontends mit Hilfe des Angular Frameworks für eine bereits existierende Backend-Lösung, die zur Verwaltung von Protokollen dient, sowie die Erweiterung des Backends.
+You will create an *Angular* frontend application for an already existing backend solution with a basic set of features to manage *protocols*. 
 
-Im Detail soll das Frontend folgende Anforderungen erfüllen:
-  - Eine Ansicht für den Benutzer um alle vorhandenen Datensätze zu sichten
-    * Es sollen Metdaten der Protokolle in Tabellen (auch ein  Grid ist denkbar)-Format dargestellt werden
-    * Die Tabelle soll über Metadaten filter- und sortierbar sein
-    * Das Laden sehr vieler Daten soll durch eine Pagination / Infinite scrolling gestützt werden
-  - In der letzten Spalte der Tabelle befinden sich zwei Marker (Icon oder Text) mit denen der Benutzer die folgenden zwei Aktionen ausführen kann:
-    - Löschen eines Datensatzes
-    - da zu jedem vorhandenem Datensatz jeweils ein PDF-Dokument gehört, soll der Benutzer hier die Möglichkeit zum Öffnen des PDFs in einer Webansicht haben
-  - Der Benutzer soll die Möglichkeit haben einen Datensatz im Detail zu betrachten. Dazu soll beim Klick auf den Namen eines Datensatz eine neue Seite erscheinen die detailierte Informationen zum Datensatz darstellt _(Felder können frei gewählt werden)_
+By increasing features in the frontend you will also extend the backend's functionality alongside with frontend.
 
-Das Backend soll um folgende Funktionen erweitert werden:
-  - Der Benutzer hat die Möglichkeit nach einem Datensatz zu suchen (vereinfacht bspw. über den Namen oder die anderen vorhandenen Werte). Dazu befindet sich ein Suchfeld über der Tabelle
-  - Den bereits vorhandenen Endpunkt \protocols erweitern um ein bestimmtes Protokoll abzufragen -> \protocols\1 für das Protokoll mit ID 1
-  - Einen Endpunkt hinzufügen (Name beliebig wählbar) um das PDF Dokument abfragen zu können
-  
+### Requirements
+The requirements for the frontend are the following:
+
+  - The user has a view to list all *protocols* at once, beside this he can
+    * filter and sort on the *protocols* metadata
+    * only display a subset of *protocols* to avoid huge data loading (pagination / infinite scrolling) 
+
+  - The user has the possibility to trigger the following actions for each data set:
+    * delete a *protocol*
+    * open and display the related PDF document of a *protocol* and 
+
+  - The user can select a specific *protocol* and view the details of this *protocol*.  
+
+  - The user has the possibility to search for *protocols* (e.g. for its "name") using a search-mask
+
   Optional:
-  - Einen einfachen Benutzerlogin realisieren damit nur noch angemeldete Benutzer auf die API zugreifen können. Ein Denmobenutzer reicht aus
-  - Fehlerhandling wie zB ein 404 Response wenn die API mit \protocols\7 aufgerufen wird
- 
-## Hilfsmittel
+  - Integrate a login mask for a user called "demo" and restrict access for non logged in users for the requirements above.
+  - Harden the http-request responses (e.g. return an `404` if  a user requests details for a non existing *protocol*) 
 
-- Alle "Bordmittel" des Angular-Frameworks
-- Lizenzrechtlich nicht in Konflikt stehende Komponenten- und/oder Style Frameworks
+### Tools
 
-## Zum anlegen der SQLite DB
-- dotnet tool install --global dotnet-ef
-- dotnet ef database update (im SimpleAPI Ordner)
+- All tools provided by the `.Net` or `Angular` frameworks itself
+- Any non restricted libraries provided by `NuGet` or `npm`
+- Any non restricted UI component libraries like `Material` or `Bootstrap`
+
+### Database
+
+Use the following commands to create the `SQLite DB`
+
+```bash
+dotnet tool install --global dotnet-ef
+dotnet ef database update # in "SimpleAPI" directory
+``````
