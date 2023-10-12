@@ -36,7 +36,9 @@ The requirements for the frontend are the following:
 
 Use the following commands to create the `SQLite DB`
 
-```bash
+```pwsh
 dotnet tool install --global dotnet-ef
+# or to update to the latest version
+# dotnet tool update --global dotnet-ef
 dotnet ef database update # in "SimpleAPI" directory
 ``````
